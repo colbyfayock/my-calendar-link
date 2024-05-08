@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { google, outlook, office365, yahoo, ics, CalendarEvent } from "calendar-link";
 
 function App() {
+  const buttonRef = useRef<HTMLSpanElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const event: CalendarEvent = {
@@ -17,9 +18,24 @@ function App() {
   const yahooUrl = yahoo(event);
   const icsUrl = ics(event);
 
+  function handleOnClick(event: MouseEvent) {
+    // Look for the button in the path of elements starting at
+    // the element that was clicked and look for the button.
+    if ( buttonRef.current && !event.composedPath().includes(buttonRef.current) ) {
+      setIsOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    document.body.addEventListener('click', handleOnClick);
+    return () => {
+      document.body.removeEventListener('click', handleOnClick);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <span className="inline-block relative">
+      <span ref={buttonRef} className="inline-block relative">
         <button
           className="bg-white border border-zinc-600 rounded px-4 py-3 font-bold"
           onClick={() => setIsOpen(!isOpen)}
