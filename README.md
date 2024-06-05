@@ -1,10 +1,10 @@
 # Add to Calendar Button in React
 
-Demo for tutorial [How to Create an Add to Calendar Button in React with Tailwind CSS](https://www.youtube.com/colbyfayock)
+Demo for tutorial [How to Create an Add to Calendar Button in React with Tailwind CSS](https://www.youtube.com/watch?v=1gX6_WMjLxo)
 
-📝 Article: 
+📝 Article: https://spacejelly.dev/posts/how-to-create-an-add-to-calendar-button-in-react-with-tailwind-css
 
-📺 YouTube: 
+📺 YouTube: https://www.youtube.com/watch?v=1gX6_WMjLxo
 
 🚀 Demo: https://my-calendar-link.vercel.app/
 
