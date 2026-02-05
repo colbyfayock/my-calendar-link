@@ -42,7 +42,7 @@ function App() {
         >
           Add to Calendar
         </button>
-        <ul className={`${isOpen ? 'opacity-100' : 'opacity-0 invisible' } absolute top-full left-0 min-w-full border border-zinc-600 shadow-lg py-2 px-1 transition-opacity`}>
+        <ul className={`${isOpen ? 'opacity-100' : 'opacity-0 invisible' } absolute top-full left-0 min-w-full border border-gray-200 shadow-lg py-2 px-1 transition-opacity`}>
           <li>
             <a href={icsUrl} target="_blank" className="flex items-center gap-2 text-zinc-800 hover:bg-zinc-50 px-4 py-2 whitespace-nowrap">
               <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
